@@ -1,7 +1,7 @@
 <style>
   .Faq {
     position: relative;
-    width: 327px;
+    width: 100%;
     height: 535px;
     border-radius: 22px;
     /* background-color: red; */
@@ -24,6 +24,11 @@
     top: -200px;
     left: 44px;
   }
+
+  .Faq .Faq__graphic .Faq__graphic__box {
+    display: none;
+  }
+
   .Faq h1 {
     position: relative;
     top: -190px;
@@ -124,6 +129,65 @@
     bottom: -5px;
   }
 
+  @media screen and (min-width: 1440px) {
+    .Faq {
+      margin: auto 273px;
+      height: 509px;
+
+      display: flex;
+    }
+
+    .Faq__graphic {
+      width: 45%;
+      position: relative;
+    }
+
+    .Faq .Faq__graphic .Faq__graphic__foreground {
+      top: 70px;
+      left: -84px;
+    }
+
+    .Faq .Faq__graphic .Faq__graphic__background {
+      top: -657px;
+      left: -578px;
+      overflow: hidden;
+    }
+
+    .Faq .Faq__graphic .Faq__graphic__box {
+      display: block;
+      position: relative;
+      top: -1106px;
+      left: -93px;
+      height: fit-content;
+      width: fit-content;
+    }
+    .Faq .Faq__info {
+      position: relative;
+      left: 37px;
+      top: 245px;
+      width: 44%;
+    }
+
+    .Faq__info h1 {
+      text-align: left;
+      top: -195px;
+      left: 24px;
+    }
+
+    .Faq .Faq__question__answer{
+      font-size: 14px;
+    }
+
+    .Faq .Faq__question h2{
+      letter-spacing: .042em;
+    }
+
+    .Faq__question::after {
+      left: 87%;
+    }
+
+    
+  }
   /*   .Faq .Faq__questions,
   .Faq__question {
     outline: solid 0.05rem black;
@@ -155,58 +219,68 @@
         src="./images/bg-pattern-mobile.svg"
         alt="background: woman working on computer icon shadow" />
     </picture>
+    <picture class="Faq__graphic__box">
+      <source
+        media="(min-width:1440px)"
+        srcset="./images/illustration-box-desktop.svg" />
+      <img
+        src="./images/illustration-box-desktop.svg"
+        alt="background: woman working on computer icon shadow" />
+    </picture>
   </div>
-  <h1>FAQ</h1>
-  <ul class="Faq__questions">
-    <li class="Faq__question">
-      <h2>How many team members can I invite?</h2>
-      <div class="Faq__question__answer">
-        <p>
-          You can invite up to 2 additional users on the Free plan. There is no
-          limit on team members for the Premium plan.
-        </p>
-      </div>
-      <hr>
-    </li>
-    <li class="Faq__question">
-      <h2>What is the maximum file upload size?</h2>
-      <div class="Faq__question__answer">
-        <p>
-          No more than 2GB. All files in your account must fit your allotted
-          storage space.
-        </p>
-      </div>
-      <hr>
-    </li>
-    <li class="Faq__question">
-      <h2>How do I reset my password?</h2>
-      <div class="Faq__question__answer">
-        <p>
-          Click “Forgot password” from the login page or “Change password” from
-          your profile page. A reset link will be emailed to you.
-        </p>
-      </div>
-      <hr>
-    </li>
-    <li class="Faq__question">
-      <h2>Can I cancel my subscription?</h2>
-      <div class="Faq__question__answer">
-        <p>
-          Yes! Send us a message and we’ll process your request no questions
-          asked.
-        </p>
-      </div>
-      <hr>
-    </li>
-    <li class="Faq__question">
-      <h2>Do you provide additional support?</h2>
-      <div class="Faq__question__answer">
-        <p>
-          Chat and email support is available 24/7. Phone lines are open during
-          normal business hours.
-        </p>
-      </div>
-      <hr>
-    </li>
-  </ul>
+  <div class="Faq__info">
+    <h1>FAQ</h1>
+    <ul class="Faq__questions">
+      <li class="Faq__question">
+        <h2>How many team members can I invite?</h2>
+        <div class="Faq__question__answer">
+          <p>
+            You can invite up to 2 additional users on the Free plan. There is
+            no limit on team members for the Premium plan.
+          </p>
+        </div>
+        <hr />
+      </li>
+      <li class="Faq__question">
+        <h2>What is the maximum file upload size?</h2>
+        <div class="Faq__question__answer">
+          <p>
+            No more than 2GB. All files in your account must fit your allotted
+            storage space.
+          </p>
+        </div>
+        <hr />
+      </li>
+      <li class="Faq__question">
+        <h2>How do I reset my password?</h2>
+        <div class="Faq__question__answer">
+          <p>
+            Click “Forgot password” from the login page or “Change password”
+            from your profile page. A reset link will be emailed to you.
+          </p>
+        </div>
+        <hr />
+      </li>
+      <li class="Faq__question">
+        <h2>Can I cancel my subscription?</h2>
+        <div class="Faq__question__answer">
+          <p>
+            Yes! Send us a message and we’ll process your request no questions
+            asked.
+          </p>
+        </div>
+        <hr />
+      </li>
+      <li class="Faq__question">
+        <h2>Do you provide additional support?</h2>
+        <div class="Faq__question__answer">
+          <p>
+            Chat and email support is available 24/7. Phone lines are open
+            during normal business hours.
+          </p>
+        </div>
+        <hr />
+      </li>
+    </ul>
+  </div>
 </div>
