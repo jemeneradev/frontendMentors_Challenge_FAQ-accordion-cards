@@ -1,48 +1,34 @@
 <script>
-  import { onMount } from "svelte";
-  export let date;
-
-  onMount(async () => {
-    const res = await fetch("/api/date");
-    const newDate = await res.text();
-    date = newDate;
-  });
+  import Card from "./Card.svelte" 
 </script>
 
+<style>
+  
+  main {
+    width: 327px;
+    margin: 0;
+  }
+  .design {
+    position: absolute;
+    margin: 0 auto;
+    margin-top: -683px;
+    margin-left: -8px;
+    z-index: -10;
+    /*  background-color: red; */
+  }
+  .design img {
+    margin: 0 auto;
+  }
+</style>
+
 <main>
-  <h1>Svelte + Node.js API</h1>
-  <h2>
-    Deployed with
-    <a href="https://vercel.com/docs" target="_blank" rel="noreferrer noopener">
-      Vercel
-    </a>
-    !
-  </h2>
-  <p>
-    <a
-      href="https://github.com/vercel/vercel/tree/master/examples/svelte"
-      target="_blank"
-      rel="noreferrer noopener">
-      This project
-    </a>
-    is a
-    <a href="https://svelte.dev/">Svelte</a>
-    app with three directories,
-    <code>/public</code>
-    for static assets,
-    <code>/src</code>
-    for components and content, and
-    <code>/api</code>
-    which contains a serverless
-    <a href="https://nodejs.org/en/">Node.js</a>
-    function. See
-    <a href="/api/date">
-      <code>api/date</code>
-      for the Date API with Node.js
-    </a>
-    .
-  </p>
-  <br />
-  <h2>The date according to Node.js is:</h2>
-  <p>{date ? date : 'Loading date...'}</p>
+  <Card />
+
+    <div class="design">
+    <picture>
+      <source media="(min-width:1440px)" srcset="./design/desktop-design.jpg" />
+      <source media="(max-width:1439px)" srcset="./design/mobile-design.jpg" />
+      <img src="./design/mobile-design.jpg" alt="Mobile Design" />
+    </picture>
+  </div>
 </main>
