@@ -1,6 +1,5 @@
 <style>
-
- /*  .Faq__info {
+  /*  .Faq__info {
     outline: solid 1px black;
   }
   .Faq__info .Faq__questions{
@@ -20,7 +19,7 @@
     background-color: white;
 
     margin: 0;
-    top:-35px;
+    top: -35px;
     left: 16px;
   }
 
@@ -55,7 +54,7 @@
     font-weight: bold;
     font-size: 32px;
     line-height: 32px;
-    letter-spacing: -0.005em;;
+    letter-spacing: -0.005em;
   }
 
   .Faq__info .Faq__questions {
@@ -116,8 +115,6 @@
   }
 
   .Faq__question__answer > p {
-    
-
     font-family: Kumbh Sans;
     font-style: normal;
     font-weight: normal;
@@ -128,10 +125,8 @@
     color: #000000;
     text-align: left;
     margin: 0;
-    
   }
 
-  
   .Faq__question:hover {
     height: 76px;
   }
@@ -161,13 +156,18 @@
 
   @media screen and (min-width: 1440px) {
     .Faq {
-      margin: auto 273px;
+      /* 
+      margin: auto 273px; */
+      width: 920px;
       height: 509px;
 
       display: flex;
+      top: -159px;
+      left: 273px;
     }
 
     .Faq__graphic {
+      overflow-y: hidden;
       width: 45%;
       position: relative;
     }
@@ -178,15 +178,16 @@
     }
 
     .Faq__graphic .Faq__graphic__background {
-      top: -657px;
-      left: -578px;
-      overflow: hidden;
+      top: -661px;
+      left: -578px;/* 
+      overflow: hidden; */
+      z-index: -10;
     }
 
     .Faq__graphic .Faq__graphic__box {
       display: block;
       position: relative;
-      top: -1106px;
+      top: -1114px;
       left: -93px;
       height: fit-content;
       width: fit-content;
@@ -204,19 +205,17 @@
       left: 24px;
     }
 
-    .Faq__question__answer{
+    .Faq__question__answer {
       font-size: 14px;
     }
 
-    .Faq__question h2{
-      letter-spacing: .042em;
+    .Faq__question h2 {
+      letter-spacing: 0.042em;
     }
 
     .Faq__question::after {
       left: 87%;
     }
-
-    
   }
   /*   .Faq .Faq__questions,
   .Faq__question {
