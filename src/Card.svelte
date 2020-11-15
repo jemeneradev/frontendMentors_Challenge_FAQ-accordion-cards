@@ -56,7 +56,7 @@
 
     font-family: Kumbh Sans;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 32px;
     line-height: 32px;
     letter-spacing: -0.005em;
@@ -89,7 +89,7 @@
   .Faq__question h2 {
     font-family: Kumbh Sans;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 13px;
     line-height: 13px;
     margin: 0;
