@@ -8,14 +8,17 @@
 
 <style>
   main {
-    width: 327px;
-    margin: 0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: auto auto; */
   }
 
   @media screen and (min-width: 1440px) {
     main {
       width: 920px;
-      margin-top: 100px;
+      /* margin-top: 100px; */
     }
   }
 
@@ -44,14 +47,14 @@
     margin-left: 20px;
   }
 
-  @media screen and (min-width: 1440px) {
+  
   :global(body) {
     background:  linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
   }
-  }
+  
 </style>
 
-{#if showDesign === true}
+<!-- {#if showDesign === true}
   <div class="design">
     {#if showActive !== true}
       <picture>
@@ -68,14 +71,14 @@
         <source
           media="(min-width:1440px)"
           srcset="./design/active-states.jpg" />
-        <!-- <source
+        <source
           media="(max-width:1439px)"
-          srcset="./design/mobile-active-state.jpg" /> -->
+          srcset="./design/mobile-active-state.jpg" />
         <img src="./design/active-states.jpg" alt="Mobile Design" />
       </picture>
     {/if}
   </div>
-{/if}
+{/if} -->
 
 <main>
   <Card />
@@ -89,7 +92,7 @@
   </div> -->
 </main>
 
-<div class="controls">
+<!-- <div class="controls">
   <ul>
     <li>
       <label for="showDesign">Show Design</label>
@@ -117,4 +120,4 @@
         name="showActive" />
     </li>
   </ul>
-</div>
+</div> -->

@@ -9,9 +9,13 @@
     outline: solid 1px orange;
   } */
 
+  #filter {
+    position: absolute;
+    top:-1000px;
+  }
   .Faq {
     position: relative;
-    width: 100%;
+    width: 327px;
     height: 535px;
     border-radius: 22px;
     /* background-color: red; */
@@ -19,8 +23,8 @@
     background-color: white;
 
     margin: 0;
-    top: -35px;
-    left: 16px;
+   /*  top: -35px;
+    left: 16px; */
     filter: url("#CardShadow");
   }
 
@@ -157,18 +161,18 @@
 
   @media screen and (min-width: 1440px) {
     .Faq {
-      /* 
-      margin: auto 273px; */
+      
       width: 920px;
       height: 509px;
 
       display: flex;
-      top: -159px;
-      left: 273px;
+  
+      /* top: -159px;
+      left: 273px; */
     }
 
     .Faq__graphic {
-      overflow-y: hidden;
+      overflow: hidden;
       width: 45%;
       position: relative;
     }
@@ -231,7 +235,7 @@
     opacity: 1;
   } */
 </style>
-<svg>
+<svg id="filter">
   <filter id="CardShadow">
     <feMorphology in="SourceGraphic" operator="dilate" radius="2"/>
     <feGaussianBlur stdDeviation="15" result="BLURED_FIGURE"/>
