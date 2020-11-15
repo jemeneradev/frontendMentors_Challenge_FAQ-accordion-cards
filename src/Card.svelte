@@ -15,12 +15,13 @@
     height: 535px;
     border-radius: 22px;
     /* background-color: red; */
-    opacity: 0.5;
+    /* opacity: 0.5; */
     background-color: white;
 
     margin: 0;
     top: -35px;
     left: 16px;
+    filter: url("#CardShadow");
   }
 
   .Faq__graphic .Faq__graphic__foreground {
@@ -35,7 +36,7 @@
     left: 0px;
   }
 
-  .Faq__graphic .Faq__graphic__box {
+  .Faq__graphic__box {
     display: none;
   }
 
@@ -175,22 +176,25 @@
     .Faq__graphic .Faq__graphic__foreground {
       top: 70px;
       left: -84px;
+      z-index: 1;
     }
 
     .Faq__graphic .Faq__graphic__background {
       top: -661px;
-      left: -578px;/* 
-      overflow: hidden; */
-      z-index: -10;
+      left: -578px;
+      /* overflow: hidden; */
+      z-index: 0;
     }
 
-    .Faq__graphic .Faq__graphic__box {
+    .Faq__graphic__box {
       display: block;
-      position: relative;
-      top: -1114px;
+      position: absolute;
+      top: 204px;
       left: -93px;
       height: fit-content;
       width: fit-content;
+      overflow-x: visible;
+      z-index: 2;
     }
     .Faq__info {
       position: relative;
@@ -203,6 +207,10 @@
       text-align: left;
       top: -195px;
       left: 24px;
+    }
+
+    .Faq__questions {
+      top: -189px;
     }
 
     .Faq__question__answer {
@@ -223,6 +231,20 @@
     opacity: 1;
   } */
 </style>
+<svg>
+  <filter id="CardShadow">
+    <feMorphology in="SourceGraphic" operator="dilate" radius="2"/>
+    <feGaussianBlur stdDeviation="15" result="BLURED_FIGURE"/>
+    <feOffset in="BLURED_FIGURE" dy="15" result="OFFSET"/>
+    <feBlend in="SourceGraphic" in2="OFFSET" mode="normal" result="SHADOW"/>
+    <feFlood flood-color="black" flood-opacity=".3" result="flood"/>
+    <feComposite in="flood" in2="SHADOW" operator="in" result="DROPSHADOW"/>
+    <feMerge>
+      <feMergeNode in="DROPSHADOW"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+</svg>
 
 <div class="Faq">
   <div class="Faq__graphic">
@@ -248,15 +270,15 @@
         src="./images/bg-pattern-mobile.svg"
         alt="background: woman working on computer icon shadow" />
     </picture>
-    <picture class="Faq__graphic__box">
-      <source
-        media="(min-width:1440px)"
-        srcset="./images/illustration-box-desktop.svg" />
-      <img
-        src="./images/illustration-box-desktop.svg"
-        alt="background: woman working on computer icon shadow" />
-    </picture>
   </div>
+  <picture class="Faq__graphic__box">
+    <source
+      media="(min-width:1440px)"
+      srcset="./images/illustration-box-desktop.svg" />
+    <img
+      src="./images/illustration-box-desktop.svg"
+      alt="background: woman working on computer icon shadow" />
+  </picture>
   <div class="Faq__info">
     <h1>FAQ</h1>
     <ul class="Faq__questions">

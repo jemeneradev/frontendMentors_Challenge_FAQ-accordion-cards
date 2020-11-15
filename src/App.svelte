@@ -45,7 +45,9 @@
   }
 
   @media screen and (min-width: 1440px) {
-  
+  :global(body) {
+    background:  linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  }
   }
 </style>
 
